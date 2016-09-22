@@ -1,11 +1,27 @@
 <h3>These are the Results!</h3>
-<ol>
-<% @results.each do |r| %>
-	<li>
-    ......
-		<strong><%= r.name %></strong>
-    Date:<%= pers.date %>
-	</li>
+<p><strong>Your words (<%= @word1 %> and <%= @word2 %>) gave an index of <%= @scores[2] %> with a score of <%= @scores[0]*@scores[1] %>. <br><%= @comment %></strong></p>
+
+<% (0..2).each do |i| %>
+<p>Result of "<%= @searchs[i].to_s %>":<%= @scores[i].to_s %><br></p>
 <% end %>
+
+<ol>
+  <% i=2 %>
+  <%  if (@scores[2]==0) then %>
+  <% outMessage="There were no tweets including the given 2 words." %>
+  <p><%= outMessage %></p>
+  <% end %>
+<% x=@tweets[i]['statuses'].size %>
+<% randGen=Random.new %>
+<%  if (@scores[2]!=0) then %>
+<% r=@tweets[i]['statuses'][randGen.rand(x)] %>
+	<li>
+		<strong><%= r['user']['name'] %></strong>
+    <br>
+    Tweet:<br>
+    <textarea rows=5 cols=50><%= r['text'] %></textarea><br>
+	</li>
+  <% end %>
 </ol>
+
 <a href="/">Back to Home Page!</a>
