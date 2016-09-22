@@ -20,9 +20,10 @@ post '/result' do
     @searchs[0]="\"#{s1}\" -\"#{s2}\""
     @searchs[1]="\"#{s2}\" -\"#{s1}\""
     @searchs[2]="\"#{s1}\" \"#{s2}\""
-    search_tweets(@searchs[0],count,0)
-    search_tweets(@searchs[1],count,1)
-    search_tweets(@searchs[2],count,2)
+    connTwitter=ConnTwitter.new
+    @tweets[0],@scores[0]=connTwitter.search_tweets(@searchs[0],count)
+    @tweets[1],@scores[1]=connTwitter.search_tweets(@searchs[1],count)
+    @tweets[2],@scores[2]=connTwitter.search_tweets(@searchs[2],count)
     @comment=""
     if @scores[2]==0 then
       @comment="You got whacked!"

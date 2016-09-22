@@ -1,6 +1,7 @@
 #twitterwhack  
-video link:  
+video links:  
 https://youtu.be/oAOG6gWDbls  
+https://youtu.be/-y759sS-lHE   (unit test)  
         
 given 2 words-
 word1 and word2  
