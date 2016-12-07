@@ -1,0 +1,6 @@
+{
+  "name": "Twitterwhack",
+  "tagline": "a game implemented with twitter apis",
+  "body": "#twitterwhack  \r\nvideo links:  \r\nhttps://youtu.be/oAOG6gWDbls  \r\nhttps://youtu.be/-y759sS-lHE   (unit test)  \r\n        \r\ngiven 2 words-\r\nword1 and word2  \r\nsearch only word1 and store the number of results to @scores[0]  \r\nsearch only word2 and store the number of results to @scores[1]  \r\nsearch both word1 and word2 and store the number of results to @scores[2]  \r\n  \r\n\r\nindex-@scores[2]  \r\nscore-@scores[0]\\*@scores[0]  \r\n  \r\nShow index and score and a comment according to index.   \r\nShow a random tweet that was found by searching both words.  \r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
